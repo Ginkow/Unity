@@ -1,0 +1,12 @@
+# Ignore les fichiers temporaires d'Unity
+Library/
+Temp/
+Logs/
+obj/
+*.csproj
+*.sln
+*.unitypackage
+
+# Ignore les fichiers de build
+Build/
+Builds/

@@ -7,6 +7,11 @@ public class Shoot : MonoBehaviour
     public Camera cam;
     void Update()
     {
+        if (Timer.IsGameEnd)
+        {
+            return;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -18,7 +23,13 @@ public class Shoot : MonoBehaviour
                 if (target != null)
                 {
                     target.Shooter();
+                    Score.Instance.AddScore(100);
+                    Accuracy.Instance.Hit();
+                } else {
+                    Accuracy.Instance.Miss();
                 }
+            } else {
+                Accuracy.Instance.Miss();
             }
         }
     }

@@ -14,6 +14,11 @@ public class MoveePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Timer.IsGameEnd)
+        {
+            return;
+        }
+        
         transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * RotationSpeed, 0));
 
 

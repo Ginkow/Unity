@@ -9,6 +9,11 @@ public class MoveCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Timer.IsGameEnd)
+        {
+            return;
+        }
+        
         transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * RotationSpeed, 0, 0));
 
         _currentXRotation -= Input.GetAxis("Mouse Y");

@@ -68,11 +68,13 @@
     <Compile Include="Assets\Script\Accuracy.cs" />
     <Compile Include="Assets\Script\MovePlayer.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
+    <Compile Include="Assets\ScriptMenu\SensibilityMouse.cs" />
     <Compile Include="Assets\ScriptMenu\MainMenu.cs" />
     <Compile Include="Assets\Script\EndPanel.cs" />
     <Compile Include="Assets\Script\Score.cs" />
     <Compile Include="Assets\Script\MoveCam.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
+    <Compile Include="Assets\Script\Continue.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\Shoot.cs" />
   </ItemGroup>

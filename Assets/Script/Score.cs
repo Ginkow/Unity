@@ -30,11 +30,9 @@ public class Score : MonoBehaviour
         scoreText.text = $"Score : {score}";
     }
 
-    public int FinalScore()
+    public void FinalScore()
     {
-        if (score == 0) {
-            return 0;
-        }
-        return score;
+        PlayerPrefs.SetInt("FinalScore", score);
+        PlayerPrefs.Save();
     }
 }

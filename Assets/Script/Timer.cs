@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public static Action GameEnd;
     public static bool IsGameEnd = false;
+    public static bool IsPaused = false;
 
     void Start()
     {
@@ -19,11 +20,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsGameEnd)
+        if (IsGameEnd || IsPaused)
         {
             return;
         }
-
+        
         
         if (time > 0)
         {
@@ -48,6 +49,9 @@ public class Timer : MonoBehaviour
     public void FinishTimer()
     {
         timerText.text = "00:00";
+        if (Score.Instance != null){
+            Score.Instance.FinalScore();
+        }
         if (GameEnd != null){
             IsGameEnd = true;
             GameEnd.Invoke();

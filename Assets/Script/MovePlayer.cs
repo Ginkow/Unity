@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 
-public class MoveePlayer : MonoBehaviour
+public class MovePlayer : MonoBehaviour
 {
-
+    public GameObject Pause;
+    public Continue continues;
     public float MoveSpeed = 25;
     public float RotationSpeed = 0.5f;
+    public static bool IsPaused = false; 
 
     void Start(){
         Cursor.lockState = CursorLockMode.Locked;
@@ -31,7 +33,7 @@ public class MoveePlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
+            continues.PauseGame();
         }
     }
 }

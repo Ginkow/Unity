@@ -44,10 +44,10 @@ public class EndPanel : MonoBehaviour
     }
 
     void GameOver(){
-        scoreFinal = Score.Instance.FinalScore();
+        scoreFinal = PlayerPrefs.GetInt("FinalScore", 0);
         accuracyFinal = Accuracy.Instance.FinalAccuracy();
 
-        scoreText.text = "Score : " + scoreFinal;
+        scoreText.text = $"Score: {scoreFinal}";
         accuracyText.text = "Accuracy : " + accuracyFinal.ToString("0.00") + "%";
     }
 }

@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 458728521}
   - component: {fileID: 458728520}
   - component: {fileID: 458728519}
+  - component: {fileID: 458728522}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -873,6 +874,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &458728522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458728517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8231bc9523e7a264c8ee703dd607dd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenu: {fileID: 1944854301}
+  leaderboardMenu: {fileID: 643299788}
 --- !u!1 &505313463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,9 +2368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7797b461988a05c4baf4118e7cd706a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivitySlider: {fileID: 1218576555}
+  sensibilitySlider: {fileID: 1218576555}
   Sensibilty: {fileID: 1028905806}
-  mouseSensitivity: 1
   MainMenu: {fileID: 1944854301}
   optionsMenu: {fileID: 1650760460}
 --- !u!1 &1364423313

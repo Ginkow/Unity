@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public static MainMenu Instance;
+    
     public void PlayGame(){
+        Timer.IsPaused = false;
+        Timer.IsGameEnd = false;
         SceneManager.LoadSceneAsync(1);
     }
 

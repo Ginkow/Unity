@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         IsGameEnd = false;
+        IsPaused = false;
+        time = 10f;
     }
 
     // Update is called once per frame

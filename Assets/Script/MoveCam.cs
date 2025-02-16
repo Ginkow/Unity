@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveCam : MonoBehaviour
 {
-    public float RotationSpeed;
+    // public float RotationSpeed;
     public float maxRotationAngle = 90f;
     private float _currentXRotation = 0f;
 
@@ -12,7 +12,9 @@ public class MoveCam : MonoBehaviour
         if (Timer.IsGameEnd)
         {
             return;
-        }        
+        }
+
+        float RotationSpeed = SensibilityMouse.mouseSensibility;
         transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * RotationSpeed, 0, 0));
 
         _currentXRotation -= Input.GetAxis("Mouse Y");

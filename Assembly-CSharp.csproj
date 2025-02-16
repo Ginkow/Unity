@@ -72,6 +72,7 @@
     <Compile Include="Assets\ScriptMenu\MainMenu.cs" />
     <Compile Include="Assets\Script\EndPanel.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\ScriptMenu\Leaderboard.cs" />
     <Compile Include="Assets\Script\MoveCam.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
     <Compile Include="Assets\Script\Continue.cs" />

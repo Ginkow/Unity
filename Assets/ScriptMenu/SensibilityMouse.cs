@@ -6,25 +6,24 @@ using TMPro;
 
 public class SensibilityMouse : MonoBehaviour
 {
-    public Slider sensitivitySlider;
+    public Slider sensibilitySlider;
     public static SensibilityMouse Instance;
     public TMP_InputField Sensibilty;
-    public float mouseSensitivity = 1.0f;
-    public GameObject MainMenu;  // Référence au menu principal
-    public GameObject optionsMenu;  // Référence au menu des options
+    public static float mouseSensibility = 1.0f;
+    public GameObject MainMenu;
+    public GameObject optionsMenu;
 
     void Start()
     {
-        sensitivitySlider.value = mouseSensitivity;
-        Sensibilty.text = mouseSensitivity.ToString("0.0");
+        sensibilitySlider.value = mouseSensibility;
+        Sensibilty.text = mouseSensibility.ToString("0.0");
 
-        sensitivitySlider.onValueChanged.AddListener(OnSliderChanged);
+        sensibilitySlider.onValueChanged.AddListener(OnSliderChanged);
         Sensibilty.onEndEdit.AddListener(OnInputChanged);
     }
 
     void Update()
     {
-        // Si la touche Échap est pressée, revenir au menu principal
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ShowMainMenu();
@@ -33,7 +32,7 @@ public class SensibilityMouse : MonoBehaviour
 
     void OnSliderChanged(float value)
     {
-        mouseSensitivity = value;
+        mouseSensibility = value;
         Sensibilty.text = value.ToString("0.0");
         UpdateMouseSensitivity();
     }
@@ -42,16 +41,15 @@ public class SensibilityMouse : MonoBehaviour
     {
         if (float.TryParse(value, out float newSensitivity))
         {
-            mouseSensitivity = Mathf.Clamp(newSensitivity, sensitivitySlider.minValue, sensitivitySlider.maxValue);
-            sensitivitySlider.value = mouseSensitivity;
+            mouseSensibility = Mathf.Clamp(newSensitivity, sensibilitySlider.minValue, sensibilitySlider.maxValue);
+            sensibilitySlider.value = mouseSensibility;
             UpdateMouseSensitivity();
         }
     }
 
     void UpdateMouseSensitivity()
     {
-        // Met ici le code pour modifier la sensibilité de ta caméra/mouvement de souris
-        Debug.Log("Nouvelle sensibilité de la souris : " + mouseSensitivity);
+        Debug.Log("Nouvelle sensibilité de la souris : " + mouseSensibility);
     }
 
     // Méthode pour revenir au menu principal

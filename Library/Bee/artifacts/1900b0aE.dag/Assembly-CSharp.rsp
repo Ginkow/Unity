@@ -374,6 +374,7 @@
 "Assets/Script/Target.cs"
 "Assets/Script/Timer.cs"
 "Assets/Script/Zone.cs"
+"Assets/ScriptMenu/Leaderboard.cs"
 "Assets/ScriptMenu/MainMenu.cs"
 "Assets/ScriptMenu/SensibilityMouse.cs"
 -langversion:9.0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -8,6 +6,7 @@ public class EndPanel : MonoBehaviour
     public GameObject endpanel;
     public TMP_Text scoreText;
     public TMP_Text accuracyText;
+
     private int scoreFinal;
     private float accuracyFinal;
     private bool ShowPanel = false;
@@ -38,6 +37,7 @@ public class EndPanel : MonoBehaviour
             GameOver();
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            // LeaderboardGame.Instance.AddScore(PlayerPrefs.GetString("PlayerName"), scoreFinal, accuracyFinal);
         }else{
             endpanel.SetActive(false);
         }

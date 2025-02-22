@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public static MainMenu Instance;
+
+    // void Start()
+    // {
+    //     if (!SceneManager.GetSceneByName("LeaderboardScene").isLoaded)
+    //     {
+    //         SceneManager.LoadScene("LeaderboardScene", LoadSceneMode.Additive);
+    //     }
+    // }
     
     public void PlayGame(){
         Timer.IsPaused = false;

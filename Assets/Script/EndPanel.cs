@@ -37,7 +37,6 @@ public class EndPanel : MonoBehaviour
             GameOver();
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            // LeaderboardGame.Instance.AddScore(PlayerPrefs.GetString("PlayerName"), scoreFinal, accuracyFinal);
         }else{
             endpanel.SetActive(false);
         }

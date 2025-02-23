@@ -52,7 +52,6 @@ public class SensibilityMouse : MonoBehaviour
         Debug.Log("Nouvelle sensibilité de la souris : " + mouseSensibility);
     }
 
-    // Méthode pour revenir au menu principal
     void ShowMainMenu()
     {
         MainMenu.SetActive(true);

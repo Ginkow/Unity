@@ -67,7 +67,6 @@
     <Compile Include="Assets\Script\Target.cs" />
     <Compile Include="Assets\Script\Accuracy.cs" />
     <Compile Include="Assets\Script\MovePlayer.cs" />
-    <Compile Include="Assets\Script\LeaderboardGame.cs" />
     <Compile Include="Assets\Script\Restart.cs" />
     <Compile Include="Assets\ScriptMenu\SensibilityMouse.cs" />
     <Compile Include="Assets\ScriptMenu\MainMenu.cs" />

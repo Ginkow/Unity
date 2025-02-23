@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MoveCam : MonoBehaviour
 {
-    // public float RotationSpeed;
     public float maxRotationAngle = 90f;
     private float _currentXRotation = 0f;
 
@@ -15,9 +14,10 @@ public class MoveCam : MonoBehaviour
         }
 
         float RotationSpeed = SensibilityMouse.mouseSensibility;
-        transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * RotationSpeed, 0, 0));
+        float mouseY = Input.GetAxis("Mouse Y") * RotationSpeed;
+        transform.Rotate(new Vector3(-mouseY, 0, 0));
 
-        _currentXRotation -= Input.GetAxis("Mouse Y");
+        _currentXRotation -= mouseY;
         _currentXRotation = Mathf.Clamp(_currentXRotation, -maxRotationAngle, maxRotationAngle);
         transform.localEulerAngles = new Vector3(_currentXRotation, transform.localEulerAngles.y, transform.localEulerAngles.z);
     }

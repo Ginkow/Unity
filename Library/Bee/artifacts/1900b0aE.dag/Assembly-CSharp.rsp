@@ -365,7 +365,6 @@
 "Assets/Script/Accuracy.cs"
 "Assets/Script/Continue.cs"
 "Assets/Script/EndPanel.cs"
-"Assets/Script/LeaderboardGame.cs"
 "Assets/Script/Menu.cs"
 "Assets/Script/MoveCam.cs"
 "Assets/Script/MovePlayer.cs"

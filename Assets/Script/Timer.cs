@@ -6,7 +6,7 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    private float time = 10f;
+    private float time = 120f;
     public TMP_Text timerText;
     public static Action GameEnd;
     public static bool IsGameEnd = false;
@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     {
         IsGameEnd = false;
         IsPaused = false;
-        time = 10f;
+        time = 120f;
     }
 
     // Update is called once per frame

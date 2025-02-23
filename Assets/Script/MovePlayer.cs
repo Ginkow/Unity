@@ -6,7 +6,6 @@ public class MovePlayer : MonoBehaviour
     public GameObject Pause;
     public Continue continues;
     public float MoveSpeed = 25;
-    // public float RotationSpeed = 0.5f;
     public static bool IsPaused = false; 
 
     void Start(){
